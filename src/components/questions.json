@@ -1,0 +1,62 @@
+[
+    {
+        "questionId" : 1,
+        "questionTitle" : "Mimar Sinan'ın Ustalık Dönemi eseri sayılan Edirne'deki eserinin adı nedir?",
+        "questionCorrectAnswer" : "Selimiye Camii",
+        "questionOtherAnswer": ["Süleymaniye Camii", "Şemsi Ahmet Paşa Camii", "Hüsreviye Camii"]
+    },
+    {
+        "questionId" : 2,
+        "questionTitle" : " UEFA Kupasını alan ilk Türk takımı hangisidir?",
+        "questionCorrectAnswer" : "Galatasaray",
+        "questionOtherAnswer": ["Beşiktaş", "Fenerbahçe","Trabzonspor"]
+    }, 
+    {
+        "questionId" : 3,
+        "questionTitle" : "Atatürk tarafından 4 Eylül 1919 tarihinde Sivas Kongresi'nde kurulmuş olan gazetenin adını söyleyiniz?",
+        "questionCorrectAnswer" : "İrade-i Milliye",
+        "questionOtherAnswer": ["Minber" , "Hakimiyet-i Milliye", "Kuva-yi Milliye"]
+    }, 
+    {
+        "questionId" : 4,
+        "questionTitle" : "Gece gündüz eşitliği (ekinoks) bir yılda kaç kez gerçekleşir? ",
+        "questionCorrectAnswer" : "2",
+        "questionOtherAnswer":["1", "3","4"]
+    },
+    {
+        "questionId" : 5,
+        "questionTitle" : "İlk Türkçe sözlük hangisidir?",
+        "questionCorrectAnswer" : "Divan-ı Lugat-it Türk",
+        "questionOtherAnswer":["Kutadgu Bilig", "Atabetü'l Hakayık","Divan-ı Hikmet"]
+    },
+    {
+        "questionId" : 6,
+        "questionTitle" : "Pusulada ( N ) harfi hangi yönü ifade eder ?",
+        "questionCorrectAnswer" : "Kuzey",
+        "questionOtherAnswer" : ["Güney", "Doğu","Batı"]
+    },
+    {
+        "questionId" : 7,
+        "questionTitle" : "Telefonu kim icat etmiştir ?",
+        "questionCorrectAnswer" : "Alexander Graham Bell",
+        "questionOtherAnswer":["Thomas Edison", "Nikola Tesla","Albert Einstein"]
+    },
+    {
+        "questionId" : 8,
+        "questionTitle" : " Türkiye’nin en yüksek dağı hangisidir ?",
+        "questionCorrectAnswer" : "Ağrı Dağı",
+        "questionOtherAnswer" : ["Erciyes Dağı","Nemrut Dağı","Uludağ"]
+    },
+    {
+        "questionId" : 9,
+        "questionTitle" : "Osmanlı imparatorluğunda ilk halife kimdir ?",
+        "questionCorrectAnswer" : "Yavuz Sultan Selim",
+        "questionOtherAnswer":["Kanuni Sultan Süleyman", "Yıldırım Bayezid","Fatih Sultan Mehmet"]
+    },
+    {
+        "questionId" : 10,
+        "questionTitle" : "Cennet-cehennem mağaraları hangi ilimizdedir?",
+        "questionCorrectAnswer" : "Mersin",
+        "questionOtherAnswer": ["Antalya", "Bodrum","Muğla"]
+    } 
+]

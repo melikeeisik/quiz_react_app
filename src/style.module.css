@@ -1,0 +1,190 @@
+.appName{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b126e;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.formContainer{
+    background-color: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 20px;
+    width: 350px;
+}
+.formLogin{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.formSignup{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.authenticationBtn{    
+    width: 100%;
+    height: 35px;
+}
+.buttonStyle{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #0b126e;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    padding: 15px
+}
+.formContainer input{
+    width: 100%;
+    padding: 8px 0px;
+    border-radius: 5px;
+    border: 1px solid #0b126e;
+    box-shadow: 4px 6px #0b126e;
+    text-indent: 130px;
+}
+.inputContainer{
+    position: relative;
+}
+.formContainer label{
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    color:#0b126e;
+    font-weight: 600;
+}
+.submitBtn{
+    height: 40px;
+    background-color: #0b126e;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.submitBtn:hover{
+    cursor: pointer;
+}
+.createAccount{
+    padding-top: 10px;
+    color:#0b126e ;
+    font-weight: 500;
+}
+.questionPage{
+    width: 500px;
+}
+.questionNumber{
+    background-color: #fff;
+    width: 110px;
+    padding: 7.5px;
+    margin-bottom: 50px;
+    border-radius: 999px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.questionContainer{
+    background-color: #fff;
+    height: 90px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b126e;
+    border-radius: 999px;
+    color: #fff;
+}
+.questionBox{
+    color: #0b126e;
+    font-weight: 600;
+}
+.questionName{
+   color: #0b126e;
+   font-weight: 600;
+   font-size: 16px;
+}
+.answersContainer{
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 48% 48%;
+    row-gap: 20px;
+}
+.answerBtn{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 60px;
+    border-radius: 15px;
+    color: #0b126e;
+    font-weight: 600;
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-inline: 0px;
+    padding-block: 0px;
+    border-width: 0px;
+}
+.answerBtn:hover{
+    cursor: pointer;
+}
+.letter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 35px;
+    background-color: #d9d8d8;
+    height: 100%;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+}
+.result{
+    width: 340px;
+}
+.correctList{
+    list-style: none;
+    padding: 0px;
+    line-height: 30px;
+    width: 300px;
+}
+.user{
+    background-color: #fff;
+    font-size: 17px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #0b126e;
+    font-weight: 600;
+}
+.logOut{
+    background-color: #fff;
+    font-size: 17px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 15px 0px; 
+    color: #0b126e;
+    font-weight: 600;
+}
+.logOut:hover{
+    cursor: pointer;
+}
