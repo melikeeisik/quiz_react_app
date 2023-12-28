@@ -17,6 +17,7 @@ function Question({question,setQuestionId}) {
     const [textColor, setTextColor] = useState(Array(4).fill("#0b126e"))
     const [clicked, setClicked] = useState(Array(4).fill(false))
     const [activeUser, setActiveUser] = useState("")
+    const [barWidth, setBarWidth] = useState(100)
     const answerLetter = ["A", "B","C","D"]
     useEffect(() =>{
       const nick = sessionStorage.getItem("activeUser")
@@ -24,18 +25,39 @@ function Question({question,setQuestionId}) {
     })
     
     useEffect(() =>{
-            const resetButton = () =>{
-              setBtnStyle(Array(4).fill("#fff"));
-              setClicked(Array(4).fill(false));
-              setTextColor(Array(4).fill("#0b126e"))
-            } 
-            let questions =[...question.questionOtherAnswer, question.questionCorrectAnswer]
-            const shuuffledAnswers = arrayShuffle(questions)
-            setQuestionsAnswer(shuuffledAnswers)
-            resetButton();
-    }, [question])
+      const resetButton = () =>{
+        setBtnStyle(Array(4).fill("#fff"));
+        setClicked(Array(4).fill(false));
+        setTextColor(Array(4).fill("#0b126e"))
+      } 
+      let questions =[...question.questionOtherAnswer, question.questionCorrectAnswer]
+      const shuuffledAnswers = arrayShuffle(questions)
+      setQuestionsAnswer(shuuffledAnswers)
+      resetButton();
 
-
+      let time = setInterval(frame, 300)
+      function frame() {
+        setBarWidth((prevBar) =>{
+          if(prevBar <= 0){
+            clearInterval(time)
+            setQuestionId(prevQuestion =>{
+              if(prevQuestion == 10){
+                const findUser = users.findIndex(user => user.nickName == activeUser)
+                users[findUser].userCorrectAnswer = correctAnswer
+                localStorage.setItem("users",JSON.stringify(users))
+                navigate("/result")
+              }else{
+                return prevQuestion+1 
+              }
+            })
+            return 100
+          }else{
+            return prevBar - 1 
+          }
+        }) 
+      }
+      return () => clearInterval(time)
+      }, [question])
 
     const controlAnswer = (answer , index) =>{
       if(clicked[index]){
@@ -58,7 +80,6 @@ function Question({question,setQuestionId}) {
         }
         updatedClicked[index] = true;
         updatedTextColor[index] = "#fff";
-        console.log(updatedTextColor[index])
         setBtnStyle(updatedStyle);
         setClicked(updatedClicked);
         setTextColor(updatedTextColor)
@@ -88,6 +109,12 @@ function Question({question,setQuestionId}) {
           Soru {question.questionId}/10
         </div>
       </div>
+      <div>
+      <div className={style.progress}>
+        <div  style={{width: `${barWidth}%`}} className={style.bar}>
+        </div>
+      </div>
+      </div>
       <div className={style.questionContainer}>
         <div className={style.questionName}>{question.questionTitle}</div>
       </div> 
@@ -98,7 +125,7 @@ function Question({question,setQuestionId}) {
                     <button 
                     className={style.answerBtn} 
                     style={{backgroundColor: btnStyle[index], color:textColor[index]}} 
-                    onClick={() =>controlAnswer(item, index)} 
+                    onClick={() =>{controlAnswer(item, index);setBarWidth(100)}} 
                     key={index} 
                     disabled={clicked[index]}
                     >

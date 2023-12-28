@@ -81,6 +81,7 @@
 .questionPage{
     width: 500px;
 }
+
 .questionNumber{
     background-color: #fff;
     width: 110px;
@@ -90,6 +91,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+.progress{
+    width: 100%;
+    background-color:#060b4c ;
+    border-radius: 999px;
+    border: 5px solid #1722c2 ;
+    margin-bottom: 25px;
+}
+.bar{
+    width: 100%;
+    background-color: #4eb2d3;
+    border-radius: 999px;
+    height: 20px;
 }
 .questionContainer{
     background-color: #fff;
