@@ -79,18 +79,27 @@
     font-weight: 500;
 }
 .questionPage{
-    width: 500px;
+    width: 700px;
 }
-
+.boxContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+}
 .questionNumber{
     background-color: #fff;
     width: 110px;
     padding: 7.5px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     border-radius: 999px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 5px;
 }
 .progress{
     width: 100%;
@@ -168,6 +177,42 @@
     height: 100%;
     border-top-left-radius:15px;
     border-bottom-left-radius:15px;
+}
+.jokersContainer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.joker{
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    color: #fff;
+    background-color:#060b4c ;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 15px;
+}
+.jokerDisabled{
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    color: #474545;
+    background-color:#626362;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 15px;
+}
+.joker:hover{
+    cursor: pointer;
+}
+.joker span{
+    padding-left: 10px;
+}
+.jokerDisabled span{
+    padding-left: 10px;
 }
 .result{
     width: 340px;
