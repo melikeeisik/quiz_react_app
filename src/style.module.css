@@ -20,11 +20,31 @@
     flex-direction: column;
     justify-content: space-between;
 }
+.formLoginWarning{
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .formSignup{
     height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.formSignupWarning{
+    height: 310px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.warningBox{
+    color:#ba0600 ;
+    border: 1px solid #ba0600;
+    background-color: #fff4f6;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 .authenticationBtn{    
     width: 100%;

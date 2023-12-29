@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { useFormik } from 'formik'
 import { useUsers } from './UsersContext'
 import { useNavigate } from 'react-router-dom'
@@ -7,20 +7,26 @@ import style from "../style.module.css"
 function LoginForm() {
   const navigate = useNavigate()
   const {users,setUsers} = useUsers()
+  const [warningBox, setWarningBox] = useState(false)
   const {handleSubmit , handleChange, values } = useFormik({
       initialValues:{
           nickName:"",
           userPassword:"",
           userCorrectAnswer :0
       },onSubmit:values =>{
-        console.log("hey")
         const findUser = users.find(user => user.nickName == values.nickName)
         if(findUser){
           if(findUser.userPassword == values.userPassword){
+            setWarningBox(false)
             console.log(findUser)
             navigate("/question" ,{state : 1})
             sessionStorage.setItem("activeUser", values.nickName)
+          }else{
+            setWarningBox(true)
+            console.log("no")
           }
+        }else{
+          setWarningBox(true)
         }
       },validationSchema: validationLogin
   })
@@ -36,7 +42,10 @@ return (
       <button className={style.buttonStyle}  onClick={() => navigatePage("/")}>Giriş Yap</button>
     </div>
     <div className={style.formContainer}>
-      <form className={style.formLogin} onSubmit={handleSubmit}>
+      <form className={warningBox ? style.formLoginWarning :  style.formLogin} onSubmit={handleSubmit}>
+        {
+          warningBox && <div className={style.warningBox}>Kullanıcı adınız veya şifreniz hatalıdır. Bilgilerinizi kontrol ediniz.</div>
+        }
         <div className={style.inputContainer}>
           <label htmlFor='nickName'>Kullanıcı Adınız : </label>
             <input name='nickName' value={values.nickName} onChange={handleChange}/>
