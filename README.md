@@ -11,4 +11,5 @@ Kullanıcıların soru cevapladığı ve puanlarının hesaplandığı bir bilgi
 
 ![bilg1](https://github.com/melikeeisik/quiz_react_app/assets/80756998/e378c717-442e-47de-87cb-3242b3b73687)
 ![bilg2](https://github.com/melikeeisik/quiz_react_app/assets/80756998/26ddedaa-718d-4b96-b258-b7d1e838ce88)
-![bilg3](https://github.com/melikeeisik/quiz_react_app/assets/80756998/aca9f2bf-8ddf-4820-8610-5a3a8a29b4e5)
+
+![bilg3](https://github.com/melikeeisik/quiz_react_app/assets/80756998/31cb1573-2bbf-41ed-b339-c067b9134d0d)
