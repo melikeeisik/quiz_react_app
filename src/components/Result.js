@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useUsers } from './UsersContext'
 import style from "../style.module.css"
 import { useNavigate } from 'react-router-dom'
-import Avatar from 'avataaars';
-import { generateRandomAvatarOptions } from './avatar';
+
 function Result() {
     const navigate = useNavigate()
     const [allUsers,setAllUsers] = useState([])
@@ -29,11 +28,8 @@ function Result() {
                 allUsers.map((item, index)=>{
                     return(
                         <li className={style.userContainer} key={index}>
-                            <div >
-                            <Avatar
-                            style={{ width: '65px', height: '65px' }}
-                            avatarStyle='Circle'
-                            {...generateRandomAvatarOptions() } />
+                            <div style={{  width: '65px', height: '65px' , display:"flex", alignItems:"center"}}>
+                                <img style={{width:"100%", objectFit:"contain"}}  src={`https://api.multiavatar.com/${item.userName}.png`}/>
                             </div>
                             <div className={style.userNameContainer}>
                                 <div >{item.userName} {item.userSurname} </div>

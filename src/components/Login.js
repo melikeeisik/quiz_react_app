@@ -18,12 +18,10 @@ function LoginForm() {
         if(findUser){
           if(findUser.userPassword == values.userPassword){
             setWarningBox(false)
-            console.log(findUser)
             navigate("/question" ,{state : 1})
             sessionStorage.setItem("activeUser", values.nickName)
           }else{
             setWarningBox(true)
-            console.log("no")
           }
         }else{
           setWarningBox(true)
