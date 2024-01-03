@@ -18,7 +18,7 @@ function LoginForm() {
         if(findUser){
           if(findUser.userPassword == values.userPassword){
             setWarningBox(false)
-            navigate("/question" ,{state : 1})
+            navigate("./question" ,{state : 1})
             sessionStorage.setItem("activeUser", values.nickName)
           }else{
             setWarningBox(true)
@@ -58,7 +58,7 @@ return (
       <br/>
       <div className={style.createAccount}>
         Hesabın yok mu ? 
-        <a target = "_self" href='/signup'> Hesap oluştur </a>
+        <a target = "_self" href='./signup'> Hesap oluştur </a>
       </div>
     </div>
   </div>
