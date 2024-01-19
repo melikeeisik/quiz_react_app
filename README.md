@@ -1,13 +1,16 @@
-## Bilgi Yarışması
+# Bilgi Yarışması
 Kullanıcıların soru cevapladığı ve puanlarının hesaplandığı bir bilgi yarışmasıdır.
 
-# Proje İçeriği
+## Proje İçeriği
 - Kullanıcılar soru cevaplayabilir.
 - Kullanıcılar joker haklarını kullanabilir.
 - Kullanıcılar toplam puanları hesaplanır.
 - Kullanıcılar en fazla puan alan kullanıcıdan en az puan alan kullanıcıya doğru listelenir.
 
-# Ekran Görüntüleri
+## Test Ortamı
+https://magenta-crostata-800b3e.netlify.app/
+
+## Ekran Görüntüleri
 
 ![bilg1](https://github.com/melikeeisik/quiz_react_app/assets/80756998/e378c717-442e-47de-87cb-3242b3b73687)
 ![bilg2](https://github.com/melikeeisik/quiz_react_app/assets/80756998/26ddedaa-718d-4b96-b258-b7d1e838ce88)
